@@ -182,7 +182,7 @@ if GetOption('no_lto') and GetOption('force_lto'):
 #
 ########################################################################
 
-main = Environment()
+main = Environment(tools=['default', 'git', 'mercurial'])
 
 from gem5_scons.util import get_termcap
 termcap = get_termcap()
@@ -386,10 +386,10 @@ if main['GCC'] or main['CLANG']:
 
     # Treat warnings as errors but white list some warnings that we
     # want to allow (e.g., deprecation warnings).
-    main.Append(CCFLAGS=['-Werror',
-                         '-Wno-error=deprecated-declarations',
-                         '-Wno-error=deprecated',
-                        ])
+    # main.Append(CCFLAGS=['-Werror',
+    #                      '-Wno-error=deprecated-declarations',
+    #                      '-Wno-error=deprecated',
+    #                     ])
 else:
     error('\n'.join((
           "Don't know what compiler options to use for your compiler.",
