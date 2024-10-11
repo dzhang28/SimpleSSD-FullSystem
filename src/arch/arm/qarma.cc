@@ -41,6 +41,8 @@
 
 #include "base/bitfield.hh"
 
+#include <array>
+
 using namespace QARMA;
 using namespace std;
 
