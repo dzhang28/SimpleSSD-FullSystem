@@ -20,6 +20,7 @@
 #define __SYSTEMC_EXT_TLM_UTILS_INSTANCE_SPECIFIC_EXTENSIONS_INT_H__
 
 #include <vector>
+#include <typeinfo>
 
 #include "../tlm_core/2/generic_payload/array.hh"
 
